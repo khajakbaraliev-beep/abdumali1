@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erkaklar Kiyimi - Batafsil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Modal Tizimi (JS-siz) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center; align-items: center;
+            z-index: 1000;
+        }
+        /* Tugma bosilib, havola #successModal bo'lganda modal ochiladi */
+        .modal:target {
+            display: flex;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            max-width: 400px; width: 80%;
+            position: relative;
+        }
+        .modal-content h3 { color: #2ecc71; margin-bottom: 15px; }
+        .close-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #3498db;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Erkaklar Kiyimlari Bo'limi</h1>
+        <nav><a href="index.html">Bosh sahifaga qaytish</a></nav>
+    </header>
+    <main class="container" style="padding: 40px 20px; text-align: center;">
+        <h2>Tanlangan Erkaklar Kiyimi Haqqida Ma'lumot</h2>
+        <div style="max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=500&auto=format&fit=crop" alt="Erkaklar kiyimi" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px;">
+            <h3 style="margin-top: 20px;">Premium Erkaklar Libosi</h3>
+            <p style="color: #666; font-size: 1.1rem;">Sifatli matodan tikilgan, har qanday mavsum va tadbirlar uchun mos keluvchi zamonaviy erkaklar kiyimi.</p>
+            <p class="price" style="font-size: 1.5rem; color: #e74c3c; font-weight: bold; margin: 15px 0;">Narxi: O'zgaruvchan</p>
+            <!-- ID ga yo'naltirilgan havola -->
+            <a href="#successModal" class="btn" style="display: inline-block; text-decoration: none; padding: 12px 30px; font-size: 1rem;">Buyurtma berish</a>
+        </div>
+    </main>
+
+    <!-- Modal Oynasi -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Sotib olindi!</h3>
+            <p>Xaridingiz uchun rahmat. Buyurtmangiz muvaffaqiyatli qabul qilindi!</p>
+            <!-- Yopish tugmasi manzilni o'zgartirib modalni yopadi -->
+            <a href="#" class="close-btn">Yopish</a>
+        </div>
+    </div>
+</body>
+</html>
